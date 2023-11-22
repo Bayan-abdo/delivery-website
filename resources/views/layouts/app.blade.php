@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,7 +13,7 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <link href="{{ url('/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url('/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
 
 </head>
 <body>
