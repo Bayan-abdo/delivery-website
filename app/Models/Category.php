@@ -9,7 +9,7 @@ class Category extends Model
 {
     use HasFactory;
 
-    protected $timestamp = false;
+    public $timestamps = false;
 
     public function products()
     {

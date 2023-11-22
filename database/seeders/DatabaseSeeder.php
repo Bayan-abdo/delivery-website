@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use App\Models\Customer;
 use Illuminate\Database\Seeder;
 
@@ -23,5 +24,13 @@ class DatabaseSeeder extends Seeder
         $customer->phone = fake()->phoneNumber;
         $customer->password = bcrypt('123');
         $customer->save();
+
+        $category = new Category;
+        $category->name = 'Drinks';
+        $category->save();
+
+        $category = new Category;
+        $category->name = 'Sandwiches';
+        $category->save();
     }
 }
