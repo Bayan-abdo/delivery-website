@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-<b>Menu</b> 
+<b>قائمة الطعام</b> 
 @endsection
 
 @section('content')
@@ -23,18 +23,18 @@
               <p class="card-text">{{ $item->description }}</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                <a href="{{ url('show-product/' . $item->id) }}" class="btn btn-sm btn-outline-secondary">View</a>
+                <a href="{{ url('show-product/' . $item->id) }}" class="btn btn-sm btn-outline-secondary">عرض</a>
                  @auth
-                  <a href="{{ url('edit-product/' . $item->id) }}" class="btn btn-sm btn-outline-secondary">Edit</a>
+                  <a href="{{ url('edit-product/' . $item->id) }}" class="btn btn-sm btn-outline-secondary">تعديل</a>
                   
 @endauth
-                  <a href="/cart" class="btn btn-sm  btn-primary">Order</a>
+                  <a href="/cart" class="btn btn-sm  btn-primary">إضافة إلى السلة</a>
  @auth
 
 <form action="{{ url('products/' . $item->id ) }}" method="POST">
   @method('DELETE')
   @csrf
-  <input type="submit" class="btn btn-sm btn-danger" value="Delete">
+  <input type="submit" class="btn btn-sm btn-danger" value="حذف">
 </form>
 
 @endauth

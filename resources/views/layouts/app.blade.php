@@ -32,7 +32,7 @@
                     <ul class="navbar-nav me-auto">
                     @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url('/create-product') }}">Add Product</a>
+                                <a class="nav-link" href="{{ url('/create-product') }}">إضافة منتج</a>
                             </li>
                         @endauth
                     </ul>
@@ -43,7 +43,7 @@
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                    <a class="nav-link" href="{{ route('login') }}">تسجيل الدخول</a>
                                 </li>
                             @endif
 
@@ -62,7 +62,7 @@
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
+                                       تسجيل الخروج
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

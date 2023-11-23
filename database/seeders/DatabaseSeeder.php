@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $customer = new Customer;
+        $customer->name = fake()->name;
         $customer->phone = fake()->phoneNumber;
         $customer->password = bcrypt('123');
         $customer->save();

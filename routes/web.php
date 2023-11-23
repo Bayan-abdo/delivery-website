@@ -1,9 +1,10 @@
 <?php
 
 // use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Customer\AuthController;
-use App\Http\Controllers\ProdectController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdectController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\Customer\AuthController;
 
 Route::get('/', [ProdectController::class, 'index']);
 Route::get('/products', [ProdectController::class, 'index']);
@@ -21,8 +22,8 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Route::get('customer/register', [RegisterController::class, 'showRegistrationFrom']); + Name field --> (migrations)
-// Route::post('customer/register', [RegisterController::class, 'register']);
+ Route::get('customer/register', [RegisterController::class, 'showRegistrationFrom']); 
+ Route::post('customer/register', [RegisterController::class, 'register']);
 
 Route::get('customer/login', [AuthController::class, 'showLoginForm']);
 Route::post('customer/login', [AuthController::class, 'login']);

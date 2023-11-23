@@ -289,18 +289,18 @@ h3{
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">MENU</a></li>
-                    <li><a href="">CONTACT</a></li>
+                    <li><a href="">تواصل</a></li>
+                    <li><a href="">حول</a></li>
+                    <li><a href="">قائمة الطعام</a></li>
+                    <li><a href="">الرئيسية</a></li>
                 </ul>
             </div>
         </nav>
         <div class="text-box">
             <h1> LaRoca Cafe</h1>
-            <p> أفضل موقع لتوصيل الطعام <br> the best food delivery website
+            <p> أفضل موقع لطلب الطعام <br> عبر الإنترنت
             </p>
-            <a href="" class="hero-btn">Visit Us To know More</a>
+            <a href="" class="hero-btn">قائمة الطعام</a>
         </div>
     </section>
     <!-- Comments are not displayed in the browser 
@@ -366,8 +366,8 @@ h3{
     
 -->
 <section class="reviews">
-    <h1>The Reviews of our Customer</h1>
-    <p>The reviews about our website</p>
+    <h1>تقييم الزبائن</h1>
+    <p>آراء الزبائن حول موقعنا</p>
 
 
     <div class="row">
@@ -377,7 +377,7 @@ h3{
               <p>
                 "I had great experience using this website, it is easy to use and fun too."
               </p>
-              <h3>Ahmed Elomari</h3>
+              <h3>Ahmed </h3>
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
 <i class="fa fa-star"></i>
@@ -391,7 +391,7 @@ h3{
              <p>
                "I had great experience using this website, it is easy to use and fun too."
              </p>
-             <h3>MO Elomari</h3>         
+             <h3>MO </h3>         
              <i class="fa fa-star"></i>  
              <i class="fa fa-star"></i>
              <i class="fa fa-star"></i>
@@ -404,8 +404,8 @@ h3{
 
 
 <section class="cta">
-    <h1>Reach out for any help</h1>
-    <a href=""class="hero-btn">CONTACT US</a>
+    <h1>في حالة طلب مساعدة</h1>
+    <a href=""class="hero-btn">تواصل معنا</a>
 
 </section>
 
