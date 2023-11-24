@@ -12,9 +12,9 @@ class ProductController extends Controller
     {
         $products = Product::latest()->get();
         
-        $customer = auth('customer')->user(); // no authenticated customer...
+        $customer = auth('customer')->user();
 
-        $cartItems = $customer->cart->items;
+        $cartItems = $customer?->cart?->items;
 
         return view('products/index')
             ->with('products', $products)

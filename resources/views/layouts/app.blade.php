@@ -17,6 +17,16 @@
     <link href="{{ url('/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     <link href="{{ url('/bootstrap-icons-font/bootstrap-icons.min.css') }}" rel="stylesheet">
 
+    <style>
+        .bg-primary {
+            background-color: #252E59 !important;
+        }
+
+        .btn-primary {
+            --bs-btn-bg: #252E59 !important;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -52,11 +62,9 @@
 
                         <!-- Authentication Links -->
                         @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">تسجيل الدخول</a>
-                                </li>
-                            @endif
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('customer/login') }}">تسجيل الدخول</a>
+                            </li>
 
                             @if (Route::has('register'))
                                 <li class="nav-item">

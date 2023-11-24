@@ -33,7 +33,7 @@
                                     class="btn btn-sm btn-outline-secondary">عرض</a>
 
                                 @auth('customer')
-                                    @if ($cartItems->pluck('product_id')->contains($product->id))
+                                    @if ($cartItems && $cartItems->pluck('product_id')->contains($product->id))
                                         <form action="{{ url('cart') }}" method="POST">
                                             @method('DELETE')
                                             @csrf

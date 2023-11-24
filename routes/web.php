@@ -3,7 +3,6 @@
 // use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Customer\AuthController;
 use App\Http\Controllers\Customer\CartController;
-use App\Http\Controllers\Customer\OrderController;
 use App\Http\Controllers\Customer\RegisterController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -24,8 +23,11 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
- Route::get('customer/register', [RegisterController::class, 'showRegistrationFrom']); 
- Route::post('customer/register', [RegisterController::class, 'register']);
+Route::get('orders', [App\Http\Controllers\OrderController::class, 'index']);
+
+// Customer Routes:
+Route::get('customer/register', [RegisterController::class, 'showRegistrationFrom']); 
+Route::post('customer/register', [RegisterController::class, 'register']);
 
 Route::get('customer/login', [AuthController::class, 'showLoginForm']);
 Route::post('customer/login', [AuthController::class, 'login']);
@@ -35,4 +37,4 @@ Route::delete('cart', [CartController::class, 'destroy']);
 Route::get('cart', [CartController::class, 'index']);
 Route::patch('cart', [CartController::class, 'update']);
 
-Route::post('order', [OrderController::class, 'store']);
+Route::post('order', [App\Http\Controllers\Customer\OrderController::class, 'store']);
