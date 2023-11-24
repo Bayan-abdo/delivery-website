@@ -1,22 +1,24 @@
 <?php
 
 // use App\Http\Controllers\Auth\LoginController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProdectController;
-use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Customer\AuthController;
+use App\Http\Controllers\Customer\CartController;
+use App\Http\Controllers\Customer\OrderController;
+use App\Http\Controllers\Customer\RegisterController;
+use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Route;
 
-Route::get('/', [ProdectController::class, 'index']);
-Route::get('/products', [ProdectController::class, 'index']);
-Route::get('create-product', [ProdectController::class, 'create'])->middleware('auth');
-Route::post('store-product', [ProdectController::class, 'store'])->middleware('auth');
-Route::get('show-product/{key}', [ProdectController::class, 'show']);
-Route::get('edit-product/{key}', [ProdectController::class, 'edit']);
-Route::patch('/products/{key}', [ProdectController::class, 'update']);
-Route::delete('/products/{key}', [ProdectController::class, 'destroy']);
+Route::get('/', [ProductController::class, 'index']);
+Route::get('/products', [ProductController::class, 'index']);
+Route::get('create-product', [ProductController::class, 'create'])->middleware('auth');
+Route::post('store-product', [ProductController::class, 'store'])->middleware('auth');
+Route::get('show-product/{key}', [ProductController::class, 'show']);
+Route::get('edit-product/{key}', [ProductController::class, 'edit']);
+Route::patch('/products/{key}', [ProductController::class, 'update']);
+Route::delete('/products/{key}', [ProductController::class, 'destroy']);
 
-Route::get('/cart', [ProdectController::class, 'cart']);
-Route::get('/laroca', [ProdectController::class, 'laroca']);
+Route::get('/cart', [ProductController::class, 'cart']);
+Route::get('/laroca', [ProductController::class, 'laroca']);
 
 Auth::routes(['register' => false]);
 
@@ -27,3 +29,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('customer/login', [AuthController::class, 'showLoginForm']);
 Route::post('customer/login', [AuthController::class, 'login']);
+
+Route::post('cart', [CartController::class, 'store']);
+Route::delete('cart', [CartController::class, 'destroy']);
+Route::get('cart', [CartController::class, 'index']);
+Route::patch('cart', [CartController::class, 'update']);
+
+Route::post('order', [OrderController::class, 'store']);

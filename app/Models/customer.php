@@ -11,4 +11,14 @@ class Customer extends Authenticatable
 {
     use HasFactory;
     use HasApiTokens;
+
+    public function cart()
+    {
+        return $this->hasOne(Cart::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

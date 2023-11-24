@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Customer;
 
+use App\Http\Controllers\Controller;
 use App\Models\Customer;
 use Illuminate\Http\Request;
 
@@ -9,19 +10,16 @@ class RegisterController extends Controller
 {
     public function showRegistrationFrom()
     {
-        $customers = Customer::all();
-
-        return view('Customer/Register')->with('customers', $customers);
+        return view('customer/register');
     }
 
     public function register(Request $request)
     {
-        // php artisan storage:link
         $c = new Customer;
 
         $c->name = request('name');
         $c->phone = request('phone');
-        $c->password = request('password');
+        $c->password = bcrypt(request('password'));
 
         $c->save();
 

@@ -6,13 +6,19 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 
-class ProdectController extends Controller
+class ProductController extends Controller
 {
     public function index() 
     {
-        return view('products/index')->with('myProducts', Product::latest()->get());
+        $products = Product::latest()->get();
+        
+        $customer = auth('customer')->user(); // no authenticated customer...
 
-         // Category::find(3)->products()->orderBy('price', 'DESC')->get()
+        $cartItems = $customer->cart->items;
+
+        return view('products/index')
+            ->with('products', $products)
+            ->with('cartItems', $cartItems);
     }
 
     public function create()
