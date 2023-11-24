@@ -22,7 +22,7 @@ family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.7)), url(storage/app/product_images/public/product_images/8.jpg);
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.7)), url('{{ url('images/8.jpg') }}');
     background-position: center;
     background-size: fixed;
     position: relative;
@@ -257,7 +257,7 @@ h3{
 .cta{
     margin : 100px auto ;
    width: 80% ;
-    background-image : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/bg.png);
+    background-image : linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('{{ url('images/bg.png') }}');
     background-position : center;
     background-size : cover ;
     border-radius : 10px ;
