@@ -7,14 +7,15 @@
     <title>GAMING WEBSITE</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?
-family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;500;700&family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <style>
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+font-family: 'Cairo', sans-serif;
 
 }
 
@@ -26,6 +27,13 @@ family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
     background-position: center;
     background-size: fixed;
     position: relative;
+}
+.about {
+    padding-top: 5px;
+    font-size: 27px ;
+    line-height: 35px;
+    color: #252E59;
+
 }
 
 nav{
@@ -52,6 +60,7 @@ nav img {
     color: #fff ;
     text-decoration: none;
     font-size: 13px;
+    font-weight:700px;
 }
 
 .nav-links ul li::after{
@@ -93,14 +102,14 @@ nav img {
     color: #fff ;
     border: 1px solid #fff ;
     padding: 12px 34px ;
-    font-size: 13px ;
+    font-size: 20px ;
     background: transparent ;
     position: relative ;
     cursor : pointer;
 }
 .hero-btn:hover{
-    border: 1px solid #659ee0;
-    background: #659ee0;
+    border: 1px solid #252E59;
+    background: #252E59;
     transition: 1s;
 }
 .GAMES {
@@ -109,10 +118,16 @@ nav img {
     margin: auto;
     text-align: center;
     padding-top: 100px;
+}
+.laroca{
+    font-size: 36px ;
+    font-weight: 600 ;
+    color: white; 
 }    
 h1 {
     font-size: 36px ;
     font-weight: 600 ;
+    color: #252E59;
  } 
  p{
  color : #777 ;
@@ -130,20 +145,24 @@ h1 {
 }
 .GAMING-col{
     flex-basis: 31% ;
-    background: #fff3f3;
+    background: #252E59;
     border-radius : 10px;
     margin-bottom : 5%;
     padding: 20px 12px;
     box-sizing : border-box ;
+}
+.GAMING-col p{
+   color : white;
 }
 h3{
 
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    color : white;
 }
 .GAMING-col:hover{
-    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2) ;
+    box-shadow: 0 0 20px 0px rgba(40,0,0,0.6) ;
     transition: 0.5s;
 }
 
@@ -270,16 +289,18 @@ h3{
     padding : 0 ;
 }
 
-.footer{
-   width : 100% ;
-    text-align : center ;
-    padding: 30px 0 ;
+footer{
+    padding: 1.5vw;
+    background-color:#252E59;
+
 }
 
-.footer h4{
-   margin-bottom : 25px;
-   margin-top : 20px;
-    font-weight : 600;
+footer h3{
+    color: white;
+    font-weight: 300;
+    padding-bottom: 20px;
+    text-align: center;
+    padding-right: 15px;
 }
 </style>
 
@@ -297,74 +318,81 @@ h3{
             </div>
         </nav>
         <div class="text-box">
-            <h1> LaRoca Cafe</h1>
+            <h1 class="laroca"> LaRoca Cafe</h1>
             <p> أفضل موقع لطلب الطعام <br> عبر الإنترنت
             </p>
             <a href="" class="hero-btn">قائمة الطعام</a>
         </div>
     </section>
-    <!-- Comments are not displayed in the browser 
+ 
+<section class="games">
+    <div class="row">
+        <div class="about-col">  
+            <br/> <br/> 
+            <h1>من نحن ؟</h1>
+    
+            <p class="about">   مقهى ومطعم لاروكا من سلسلة المطاعم المشهورة تم افتتاح هذا الفرع في 2023 ليقدم لكم مختلف الأنواع من الأكل الإيطالي بما في ذلك الباستا والبيتزا  مع المشروبات المميزة بالإضافة إلى توفير خدمة طلب الطعام عبر الإنترنت من خلال التبويت قائمة الطعام وهذا مايميز مطعم لاروكا عن غيره من المطاعم .
+        </p>
+           
+        </div>
+        <div>
+          <video src={{ url('images/1.mp4') }}  controls height="500" width="600" autoplay muted ></video>
+    </div>
+    </div>
+    </section>
+    <section class="games">
+    <h1>الأصناف التي نقدمها</h1>
+    <p>هنا الأصناف التي يمكنك طلبها </p>
 
+    <div class="row">
+         <div class="games-col">
+              <img src = {{ url('images/alfredo.jpg') }}> 
+              <div class="layer">
+              <h3>باستا</h3>
+         </div>
+         </div>
+         <div class="games-col">
+            <img src = {{ url('images/pizza.jpg') }}> 
+            <div class="layer">
+            <h3>بيتزا</h3>
+       </div>
+    </div>
+    <div class="games-col">
+        <img src = {{ url('images/milkshake.jpg') }}> 
+        <div class="layer">
+        <h3>مشروبات</h3>
+   </div>
+    </div>
+    
+    </div>
+    </section>  
+
+    
     <section class="GAMES">
-        <h1>GAMES THAT WE OFFER</h1>
-        <p>we have some of the best games in the world.</p>
+        <h1>تقييم الزبائن</h1>
+        <p>آراء الزبائن حول موقعنا</p>
+
 
         <div class="row">
             <div class="GAMING-col">
-                <h3>ACTION GAMES</h3>
-                <p>An action game is a video game genre that emphasizes physical challenges,
-                     including hand–eye coordination and reaction-time. The genre includes a large variety of sub-genres,
-                      such as fighting games, beat 'em ups, shooter games, and platform games.</p>
+                <h3>سارة</h3>
+                <p>موقع مرن وجميل ساعدني كثيرًا في حجز الطعام من منزلي واختصار الوقت</p>
             </div>
          
             <div class="GAMING-col">
-            <h3>FIFA</h3>
-            <p>FIFA, also known as FIFA Football and set to be known as EA Sports FC from 2023,
-                 is a series of association football video games developed and released annually by Electronic Arts under the EA Sports label. 
-                 As of 2011, the FIFA franchise has been localised into 18 languages and available in 51 countries.
-                  Listed in Guinness World Records as the best-selling sports video game franchise in the world,
-                   the FIFA series has sold over 325 million copies as of 2021.</p>
+            <h3>نوران</h3>
+            <p>تصميم مناسب وخدمة ممتازة معجبة بشدة بهذا الموقع وأنصح الجميع بالطلب منه ساعدني في إختيار طلباتي كم المنزل أو من مكان عملي</p>
             </div>
                    
                     <div class="GAMING-col">
-                    <h3>GTA</h3>
-                    <P>Grand Theft Auto (GTA) is a series of action-adventure games created by David Jones and Mike Dailly.
-                         Later titles were developed under the oversight of brothers Dan and Sam Houser,
-                          Leslie Benzies and Aaron Garbut. It is primarily developed by British development house Rockstar North (formerly DMA Design),
-                           and published by its parent company, Rockstar Games. The name of the series references the term "grand theft auto",
-                            used in the United States for motor vehicle theft. </P>
+                    <h3>أحمد</h3>
+                    <P> اعتمدت هذا الموقع لطلب الطعام وفر عليّ كثير من الوقت والجهد أصبحت أذهب إلى المطعم لإستلام طلبيتي فورًا بدلاً من الإنتظار  </P>
                     </div>
                    </div>
          
     </section>
     
-    <section class="games">
-    <h1>Our latest  games</h1>
-    <p>Here is out latest games.</p>
-
-    <div class="row">
-         <div class="games-col">
-              <img src = "images/COD1.jpg"> 
-              <div class="layer">
-              <h3>COD VANGUARD</h3>
-         </div>
-         </div>
-         <div class="games-col">
-            <img src = "images/fifa2.jpg"> 
-            <div class="layer">
-            <h3>FIFA 2022</h3>
-       </div>
-    </div>
-    <div class="games-col">
-        <img src = "images/gta.jpg"> 
-        <div class="layer">
-        <h3>GTA</h3>
-   </div>
-    </div>
-    </div>
-    </section>  
-    
--->
+<!--
 <section class="reviews">
     <h1>تقييم الزبائن</h1>
     <p>آراء الزبائن حول موقعنا</p>
@@ -401,7 +429,7 @@ h3{
    </div>
     </div>
 </section>
-
+-->
 
 <section class="cta">
     <h1>في حالة طلب مساعدة</h1>
@@ -409,20 +437,9 @@ h3{
 
 </section>
 
-<section class="footer">
-<h4>About Us</h4>
-<p>
-     Is an American video game and software developer and publisher based in Cary, 
-     North Carolina. The company was founded by Tim Sweeney as Potomac Computer Systems in 1991,</br>
-      originally located in his parents' house in Potomac.
-</p>
-<div class="icons">
-<i class ="fa fa-facebook"></i>
-<i class ="fa fa-twitter"></i>
-<i class ="fa fa-instagram"></i>
-<i class ="fa fa-linkedin"></i>
-</div>
-</section>
+<footer>
+<h3>إختيارك المناسب لطلب الطعام </h3>
+</footer>
 
 
 </body>
