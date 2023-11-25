@@ -55,6 +55,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url('/create-product') }}">إضافة منتج</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('/orders') }}">الطلبيات</a>
+                            </li>
                         @endauth
                     </ul>
 

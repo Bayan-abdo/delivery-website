@@ -11,6 +11,7 @@
                 <th scope="col">#</th>
                 <th scope="col">الزبون</th>
                 <th scope="col">الإجمالي</th>
+                <th scope="col">التسليم</th>
                 <th scope="col">عرض</th>
             </tr>
         </thead>
@@ -20,6 +21,7 @@
                     <th scope="row">{{ $order->id }}</th>
                     <td>{{ $order->customer->name }}</td>
                     <td>{{ $order->total }}</td>
+                    <td>{{ $order->reception_type }}</td>
                     <td>
                         <a href="{{ url('orders/' . $order->id) }}" class="btn btn-info btn-sm">عرض</a>
                     </td>

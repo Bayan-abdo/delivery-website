@@ -42,6 +42,18 @@
     @if ($cartItems->count())
         <form action="{{ url('order') }}" method="POST">
             @csrf
+            <div class="row">
+                <label class="col-md-4 col-form-label text-md-end">طريقة الاستلام</label>
+
+                <div class="col-md-6">
+                    <select class="form-control" name="reception_type">
+                        <option value="في المطعم">في المطعم</option>
+                        <option value="طلب خارجي">طلب خارجي</option>
+                        <option value="توصيل">توصيل</option>
+                    </select>
+                </div>
+            </div>
+
             <input type="submit" class="btn btn-md btn-primary" value="إتمام الطلب">
         </form>
     @endif
