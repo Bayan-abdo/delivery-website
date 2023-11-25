@@ -14,4 +14,12 @@ class OrderController extends Controller
         return view('orders/index')
             ->with('orders', $orders);
     }
+
+    public function show($id)
+    {
+        $order = Order::find($id);
+
+        return view('orders/show')
+            ->with('order', $order);
+    }
 }

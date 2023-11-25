@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends(auth('customer')->user() ? 'customer.layouts.app' : 'layouts.app')
 
 @section('title')
     <b>قائمة الطعام</b>

@@ -12,10 +12,10 @@ class AuthController extends Controller
 
     protected $redirectTo = '/';
 
-    // public function __construct()
-    // {
-    //     $this->middleware('guest')->except('logout');
-    // }
+    public function __construct()
+    {
+        $this->middleware('guest:customer')->except('logout');
+    }
 
     public function username()
     {
@@ -30,5 +30,12 @@ class AuthController extends Controller
     public function showLoginForm()
     {
         return view('customer.auth.login');
+    }
+
+    public function logout()
+    {
+        auth('customer')->logout();
+
+        return redirect('/');
     }
 }

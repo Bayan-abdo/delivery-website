@@ -23,7 +23,8 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('orders', [App\Http\Controllers\OrderController::class, 'index']);
+Route::get('orders', [App\Http\Controllers\OrderController::class, 'index'])->middleware('auth');
+Route::get('orders/{id}', [App\Http\Controllers\OrderController::class, 'show'])->middleware('auth');
 
 // Customer Routes:
 Route::get('customer/register', [RegisterController::class, 'showRegistrationFrom']); 
@@ -31,6 +32,7 @@ Route::post('customer/register', [RegisterController::class, 'register']);
 
 Route::get('customer/login', [AuthController::class, 'showLoginForm']);
 Route::post('customer/login', [AuthController::class, 'login']);
+Route::post('customer/logout', [AuthController::class, 'logout']);
 
 Route::post('cart', [CartController::class, 'store']);
 Route::delete('cart', [CartController::class, 'destroy']);
