@@ -54,7 +54,9 @@
                 </div>
             </div>
 
-            <input type="submit" class="btn btn-md btn-primary" value="إتمام الطلب">
+            <div class="text-center pt-5">
+                <input type="submit" class="btn btn-md btn-primary" value="إتمام الطلب">
+            </div>
         </form>
     @endif
 @endsection
