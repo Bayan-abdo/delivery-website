@@ -13,11 +13,17 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;500;700&family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 
     <link href="{{ url('/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     <link href="{{ url('/bootstrap-icons-font/bootstrap-icons.min.css') }}" rel="stylesheet">
 
     <style>
+    *{
+    font-family: 'Cairo', sans-serif;
+
+}
         .bg-primary {
             background-color: #252E59 !important;
         }
@@ -33,7 +39,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md  navbar-dark bg-primary shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/laroca') }}">
                     LaRoca
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

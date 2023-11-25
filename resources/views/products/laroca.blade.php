@@ -67,7 +67,7 @@ nav img {
     content: '';
     width : 0%;
     height : 2px;
-    background : #659ee0;
+    background :  #252E59;
     display : block;
     margin : auto;
     transition: 0.5s;
@@ -92,8 +92,9 @@ nav img {
 }
 .text-box p{
     margin : 10px 0 40px;
-    font-size: 14px;
+    font-size: 20px;
     color: #fff;
+     line-height: 25px;
 }
 
 .hero-btn{
@@ -311,8 +312,8 @@ footer h3{
             <div class="nav-links">
                 <ul>
                     <li><a href="">تواصل</a></li>
-                    <li><a href="">حول</a></li>
-                    <li><a href="">قائمة الطعام</a></li>
+                    <li><a href="{{ url('/about') }}">حول</a></li>
+                    <li><a href="{{ url('/') }}">قائمة الطعام</a></li>
                     <li><a href="">الرئيسية</a></li>
                 </ul>
             </div>
@@ -321,13 +322,13 @@ footer h3{
             <h1 class="laroca"> LaRoca Cafe</h1>
             <p> أفضل موقع لطلب الطعام <br> عبر الإنترنت
             </p>
-            <a href="" class="hero-btn">قائمة الطعام</a>
+            <a href="{{ url('/') }}" class="hero-btn">قائمة الطعام</a>
         </div>
     </section>
  
-<section class="games">
+<section class="games" id="about">
     <div class="row">
-        <div class="about-col">  
+        <div>  
             <br/> <br/> 
             <h1>من نحن ؟</h1>
     

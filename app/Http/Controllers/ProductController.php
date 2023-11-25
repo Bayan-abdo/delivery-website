@@ -95,11 +95,11 @@ class ProductController extends Controller
         return redirect('products');
     }
     
-    public function cart()
+    public function about()
     {
     
 
-        return view('products/cart');
+        return view('products/about');
     }
     public function laroca()
     {

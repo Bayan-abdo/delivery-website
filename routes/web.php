@@ -16,7 +16,7 @@ Route::get('edit-product/{key}', [ProductController::class, 'edit']);
 Route::patch('/products/{key}', [ProductController::class, 'update']);
 Route::delete('/products/{key}', [ProductController::class, 'destroy']);
 
-Route::get('/cart', [ProductController::class, 'cart']);
+Route::get('/about', [ProductController::class, 'about']);
 Route::get('/laroca', [ProductController::class, 'laroca']);
 
 Auth::routes(['register' => false]);
