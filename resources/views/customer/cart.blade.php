@@ -58,5 +58,32 @@
                 <input type="submit" class="btn btn-md btn-primary" value="إتمام الطلب">
             </div>
         </form>
+            <script>
+function showHide(elm) {
+
+
+  if (elm == "delivery") {
+  //display textbox
+    document.getElementById('fb_text').style.display = "block";
+  } else {
+  //hide textbox
+    document.getElementById('fb_text').style.display = "none";
+  }
+
+}
+</script>
+<select class="form-control" name="feed" id="feed" value="" onchange="showHide(this.value)" style="width:540px">
+  <option selected="selected" disabled="true">إختر طريقة الإستلام</option>
+  <!-- <option></option> -->
+  <option value="في المطعم" id="inthecafe"> في المطعم</option>
+  <option value="طلب خارجي" id="takeaway">طلب خارجـي</option>
+  <option value="delivery" id="delivery">توصيل (أدخل العنوان )</option>
+</select>
+
+<div class="form-group">
+  <label for="fb_text"></label>
+  <textarea class="form-control" name="fb_text" id="fb_text" rows="5" placeholder="أدخل المنطقة ورقم الشارع" value="" style="width:540px;display:none"></textarea>
+
+</div>
     @endif
 @endsection

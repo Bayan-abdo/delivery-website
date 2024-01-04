@@ -4,7 +4,7 @@
 
 <head>
     <meta name="viewport " content="with=device-width , initial-scale=1.0 ">
-    <title>GAMING WEBSITE</title>
+    <title>LaRoca</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -211,7 +211,7 @@ h3{
    transition : 0.5s;
 }
 .layer:hover h3{
-  bottom : 49%;
+  bottom : 40%;
   opacity : 1;
 }
 
@@ -286,7 +286,7 @@ h3{
 }
 .cta h1 {
     color : #fff ;
-    margin-bottom : 40px ;
+    margin-bottom : 20px ;
     padding : 0 ;
 }
 
@@ -303,6 +303,28 @@ footer h3{
     text-align: center;
     padding-right: 15px;
 }
+.contact {
+
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    display: flex;
+    padding-bottom: 100px;
+    justify-content :space-between;
+}
+
+.info {
+       font-size : 26px ;
+}
+
+.info h5 {
+    color: #252E59;
+}
+.info p {
+     color: black;
+  font-weight: 460;
+}
 </style>
 
 <body>
@@ -311,8 +333,8 @@ footer h3{
         <nav>
             <div class="nav-links">
                 <ul>
-                    <li><a href="">تواصل</a></li>
-                    <li><a href="{{ url('/about') }}">حول</a></li>
+                    <li><a href=#contact>تواصل</a></li>
+                    <li><a href=#about>حول</a></li>
                     <li><a href="{{ url('/') }}">قائمة الطعام</a></li>
                     <li><a href="">الرئيسية</a></li>
                 </ul>
@@ -361,7 +383,7 @@ footer h3{
     <div class="games-col">
         <img src = {{ url('images/milkshake.jpg') }}> 
         <div class="layer">
-        <h3>مشروبات</h3>
+        <h3>عصائر و مشروبات</h3>
    </div>
     </div>
     
@@ -392,51 +414,54 @@ footer h3{
                    </div>
          
     </section>
-    
-<!--
-<section class="reviews">
-    <h1>تقييم الزبائن</h1>
-    <p>آراء الزبائن حول موقعنا</p>
 
-
-    <div class="row">
-    <div class="reviews-col">
-         <img src="images/m.jpg">
-         <div>
-              <p>
-                "I had great experience using this website, it is easy to use and fun too."
-              </p>
-              <h3>Ahmed </h3>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star"></i>
-<i class="fa fa-star-o"></i>
-         </div>
-    </div>
-    <div class="reviews-col">
-        <img src="images/ga.jpg" >
-        <div>
-             <p>
-               "I had great experience using this website, it is easy to use and fun too."
-             </p>
-             <h3>MO </h3>         
-             <i class="fa fa-star"></i>  
-             <i class="fa fa-star"></i>
-             <i class="fa fa-star"></i>
-             <i class="fa fa-star"></i>
-             <i class="fa fa-star-half-o"></i>
-        </div>
-   </div>
-    </div>
-</section>
--->
 
 <section class="cta">
     <h1>في حالة طلب مساعدة</h1>
-    <a href=""class="hero-btn">تواصل معنا</a>
+    <a href="#contact"class="hero-btn">تواصل معنا</a>
 
 </section>
+
+<section class="games" id="contact">
+ <h1>تواصـل معنـا</h1>
+ </section>
+ 
+  <section class="contact">
+     
+<br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.458954979815!2d13.158373974389676!3d32.88603177840903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13a8ed44b653ca2d%3A0x3d99c2118eea8d88!2sLaRoca!5e0!3m2!1sen!2sly!4v1702656303260!5m2!1sen!2sly"
+        width="650" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="info">
+            <div>
+            <div> 
+                <i class ="fa fa-home"></i>
+                <span>
+                    <h5>ليبيا، طرابلس</h5>
+                    <p>طريق الشط الليدو </p>
+                </span>
+            </div>
+            <div> 
+                <i class ="fa fa-phone"></i>
+                <span>
+                    <h5>+218 91 038 8833</h5>
+                    <p></p>
+                </span>
+            </div>
+            <div> 
+                <i class ="fa fa-envelope-o"></i>
+                <span>
+                    <h5>LaRoca@gmail.com</h5>
+                    <p>راسلنا لأي إستفسار</p>
+                </span>
+            </div>
+                <div> 
+                <span>
+                    <h5>مواعيد العمل</h5>
+                    <p>يوميًا ماعدا الجمعة من 9 صباحًا إلى 11 مساءً</p>
+                </span>
+            </div>
+            </div>
+    </section>
 
 <footer>
 <h3>إختيارك المناسب لطلب الطعام </h3>

@@ -10,6 +10,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">الزبون</th>
+                  <th scope="col">الهاتف</th>
                 <th scope="col">الإجمالي</th>
                 <th scope="col">التسليم</th>
                 <th scope="col">عرض</th>
@@ -20,6 +21,7 @@
                 <tr>
                     <th scope="row">{{ $order->id }}</th>
                     <td>{{ $order->customer->name }}</td>
+                      <td>{{ $order->customer->phone }}</td>
                     <td>{{ $order->total }}</td>
                     <td>{{ $order->reception_type }}</td>
                     <td>

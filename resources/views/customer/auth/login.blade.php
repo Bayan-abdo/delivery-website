@@ -45,6 +45,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     تسجيل الدخول
                                 </button>
+                                <a href="{{ url('/customer/register') }}">إنشاء حساب</a>
                             </div>
                         </div>
                     </form>
