@@ -10,15 +10,24 @@ class ProductController extends Controller
 {
     public function index() 
     {
-        $products = Product::latest()->get();
-        
+        $products = Product::query();
+
+        if (request('category_id')) {
+            $products = $products->where('category_id', request('category_id'));
+        }
+
+        $products = $products->latest()->get();
+
         $customer = auth('customer')->user();
 
         $cartItems = $customer?->cart?->items;
 
+        $categories = Category::all();
+
         return view('products/index')
             ->with('products', $products)
-            ->with('cartItems', $cartItems);
+            ->with('cartItems', $cartItems)
+            ->with('categories', $categories);
     }
 
     public function create()

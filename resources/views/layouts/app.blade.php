@@ -19,20 +19,7 @@
     <link href="{{ url('/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     <link href="{{ url('/bootstrap-icons-font/bootstrap-icons.min.css') }}" rel="stylesheet">
 
-    <style>
-    *{
-    font-family: 'Cairo', sans-serif;
-
-}
-        .bg-primary {
-            background-color: #252E59 !important;
-        }
-
-        .btn-primary {
-            --bs-btn-bg: #252E59 !important;
-        }
-    </style>
-
+    <link href="{{ url('/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>

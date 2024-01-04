@@ -1,7 +1,7 @@
 @extends(auth('customer')->user() ? 'customer.layouts.app' : 'layouts.app')
 
 @section('title')
-    <b>قائمة الطعام</b>
+    <h1>قائمة الطعام</h1>
 @endsection
 
 @section('content')
@@ -11,6 +11,21 @@
         {{ session('status') }}
     </div>
 @endif
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5" id="foodCategories">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav" style="margin: 0 auto">
+      @foreach ($categories as $category)
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url("products?category_id={$category->id}") }}">{{ $category->name}}</a>
+      </li>
+      @endforeach
+    </ul>
+  </div>
+</nav>
 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 

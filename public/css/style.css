@@ -1,0 +1,24 @@
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+.bg-primary {
+    background-color: #252E59 !important;
+}
+
+.btn-primary {
+    --bs-btn-bg: #252E59 !important;
+}
+
+#foodCategories .navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .nav-link {
+    color: #252E59 !important;
+}
+
+#foodCategories .nav-link.active {
+    border-bottom: 2px solid #252E59 !important;
+
+}
+
+h1 {
+    color: #252E59 !important;
+}

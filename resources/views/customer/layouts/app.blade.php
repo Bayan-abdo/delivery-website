@@ -15,24 +15,10 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200;300;400;500;700&family=Lato:wght@300;400;700&family=Libre+Baskerville:wght@400;700&family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
     <link href="{{ url('/css/bootstrap.rtl.min.css') }}" rel="stylesheet">
     <link href="{{ url('/bootstrap-icons-font/bootstrap-icons.min.css') }}" rel="stylesheet">
 
-    <style>
-    *{
-    font-family: 'Cairo', sans-serif;
-
-}
-        .bg-primary {
-            background-color: #252E59 !important;
-        }
-
-        .btn-primary {
-            --bs-btn-bg: #252E59 !important;
-        }
-    </style>
-
+    <link href="{{ url('/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
