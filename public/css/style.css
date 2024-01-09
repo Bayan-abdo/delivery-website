@@ -7,10 +7,10 @@
 }
 
 .btn-primary {
-    --bs-btn-bg: #252E59 !important;
+    --bs-btn-bg: #252E59 !important;;
 }
 
-#foodCategories .navbar-nav .nav-link.active, .navbar-nav .nav-link.show, .nav-link {
+#foodCategories .navbar-nav .nav-link.active .navbar-nav .nav-link.show .nav-link {
     color: #252E59 !important;
 }
 
