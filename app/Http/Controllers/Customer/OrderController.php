@@ -14,6 +14,7 @@ class OrderController extends Controller
         $order = $customer->orders()->make();
 
         $order->reception_type = request('reception_type');
+        $order->address = request('address');
         $order->save();
 
         foreach ($customer->cart->items as $cartItem) {

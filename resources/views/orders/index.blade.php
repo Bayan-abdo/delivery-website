@@ -13,6 +13,7 @@
                   <th scope="col">الهاتف</th>
                 <th scope="col">الإجمالي</th>
                 <th scope="col">التسليم</th>
+                <th scope="col">العنوان</th>
                 <th scope="col">عرض</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                       <td>{{ $order->customer->phone }}</td>
                     <td>{{ $order->total }}</td>
                     <td>{{ $order->reception_type }}</td>
+                        <td>{{ $order->address }}</td>
                     <td>
                         <a href="{{ url('orders/' . $order->id) }}" class="btn btn-info btn-sm">عرض</a>
                     </td>

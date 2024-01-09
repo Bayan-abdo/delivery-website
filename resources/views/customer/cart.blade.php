@@ -42,7 +42,7 @@
     @if ($cartItems->count())
         <form action="{{ url('order') }}" method="POST">
             @csrf
-            <div class="row">
+            {{-- <div class="row">
                 <label class="col-md-4 col-form-label text-md-end">طريقة الاستلام</label>
 
                 <div class="col-md-6">
@@ -52,13 +52,8 @@
                         <option value="توصيل">توصيل</option>
                     </select>
                 </div>
-            </div>
-
-            <div class="text-center pt-5">
-                <input type="submit" class="btn btn-md btn-primary" value="إتمام الطلب">
-            </div>
-        </form>
-            <script>
+            </div> --}}
+                        <script>
 function showHide(elm) {
 
 
@@ -72,9 +67,8 @@ function showHide(elm) {
 
 }
 </script>
-<select class="form-control" name="feed" id="feed" value="" onchange="showHide(this.value)" style="width:540px">
+<select class="form-control" name="reception_type" id="feed" value="" onchange="showHide(this.value)" style="width:540px">
   <option selected="selected" disabled="true">إختر طريقة الإستلام</option>
-  <!-- <option></option> -->
   <option value="في المطعم" id="inthecafe"> في المطعم</option>
   <option value="طلب خارجي" id="takeaway">طلب خارجـي</option>
   <option value="delivery" id="delivery">توصيل (أدخل العنوان )</option>
@@ -82,8 +76,14 @@ function showHide(elm) {
 
 <div class="form-group">
   <label for="fb_text"></label>
-  <textarea class="form-control" name="fb_text" id="fb_text" rows="5" placeholder="أدخل المنطقة ورقم الشارع" value="" style="width:540px;display:none"></textarea>
+  <textarea class="form-control" name="address" id="fb_text" rows="5" placeholder="أدخل المنطقة ورقم الشارع" value="" style="width:540px;display:none"></textarea>
 
 </div>
+
+            <div class="text-center pt-5">
+                <input type="submit" class="btn btn-md btn-primary" value="إتمام الطلب">
+            </div>
+        </form>
+
     @endif
 @endsection
